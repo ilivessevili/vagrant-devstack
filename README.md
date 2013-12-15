@@ -5,3 +5,5 @@ REF:
 www.devstack.org
 
 www.vagrantup.com
+
+http://www.chenshake.com/devstack-installation-and-testing/
