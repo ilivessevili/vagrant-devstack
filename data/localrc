@@ -1,0 +1,47 @@
+# Misc
+HOST_IP=192.168.56.110
+DATABASE_PASSWORD=admin
+ADMIN_PASSWORD=admin
+SERVICE_PASSWORD=admin
+SERVICE_TOKEN=admin
+RABBIT_PASSWORD=admin
+OFFLINE=false
+
+#change from github to csdn
+GIT_BASE=https://code.csdn.net
+
+# Enable Logging
+
+LOGFILE=/opt/stack/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=True
+SCREEN_LOGDIR=/opt/stack/logs
+
+# Pre-requisite
+ENABLED_SERVICES=rabbit,mysql,key
+
+GIT_BASE=https://code.csdn.net
+
+# Nova
+ENABLED_SERVICES+=,n-api,n-crt,n-obj,n-cpu,n-cond,n-sch
+IMAGE_URLS+=",https://launchpad.net/cirros/trunk/0.3.0/+download/cirros-0.3.0-x86_64-disk.img"
+
+#Horizon
+ENABLED_SERVICES+=,horizon
+
+# Glance
+ENABLED_SERVICES+=,g-api,g-reg
+
+# Neutron
+ENABLED_SERVICES+=,q-svc,q-agt,q-dhcp,q-l3,q-meta,neutron
+
+# Cinder
+ENABLED_SERVICES+=,cinder,c-api,c-vol,c-sch
+
+# Heat - Orchestration Service
+ENABLED_SERVICES+=,heat,h-api,h-api-cfn,h-api-cw,h-eng
+#IMAGE_URLS+=",http://fedorapeople.org/groups/heat/prebuilt-jeos-images/F17-x86_64-cfntools.qcow2"
+
+# Ceilometer - Metering Service (metering + alarming)
+#ENABLED_SERVICES+=,ceilometer-acompute,ceilometer-acentral,ceilometer-collector,ceilometer-api
+#ENABLED_SERVICES+=,ceilometer-alarm-notify,ceilometer-alarm-eval
